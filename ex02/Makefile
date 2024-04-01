@@ -6,7 +6,7 @@
 #    By: jadithya <jadithya@student.42abudhabi.ae>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/27 12:21:33 by jadithya          #+#    #+#              #
-#    Updated: 2024/03/11 12:00:17 by jadithya         ###   ########.fr        #
+#    Updated: 2024/04/01 10:16:51 by jadithya         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ OS := ${shell uname}
 
 CC := c++
 
-NAME := whatever
+NAME := array
 
 CXXFLAGS := -Wall -Wextra -Werror -std=c++98
 
