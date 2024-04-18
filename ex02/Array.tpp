@@ -6,7 +6,7 @@
 /*   By: jadithya <jadithya@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 12:42:48 by jadithya          #+#    #+#             */
-/*   Updated: 2024/04/01 13:13:50 by jadithya         ###   ########.fr       */
+/*   Updated: 2024/04/18 15:15:31 by jadithya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,21 +31,20 @@ Array<T>::Array(const Array &a) {
 	std::cout << "Copy constructor called " << std::endl;
 	this->list = new T[a.size()]();
 	this->n = a.n;
+	for (int i = 0; static_cast<unsigned int>(i) < this->n; i++)
+		this->list[i] = a.list[i];
 }
 
 template <class T>
 Array<T>::~Array() {
 	std::cout << "Destructor called" << std::endl;
+	delete[] this->list;
 }
 
 template <class T>
 Array<T> &Array<T>::operator= (const Array &a) {
 	std::cout << "Copy assignment operator called " << std::endl;
-	if (*this != a) {
-		this->list = new T[a.size()]();
-		this->n = a->n;
-	}
-	return (*this);
+	return (Array(a));
 }
 
 template <class T>
